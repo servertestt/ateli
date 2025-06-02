@@ -1,0 +1,644 @@
+
+  body {
+    background: #F5F0EB;
+    font-family: 'Nunito', sans-serif;
+    overflow-x: hidden;
+    padding-top: 70px;
+  }
+
+
+  /*---------------------------------------
+     шрифти             
+  -----------------------------------------*/
+
+  h1,h2,h3,h4,h5,h6 {
+    font-family: 'Muli', sans-serif;
+    font-weight: bold;
+    line-height: inherit;
+  }
+
+  h1 {
+    color: #252525;
+    font-size: 3em;
+    line-height: normal;
+  }
+
+  h2 {
+    color: #353535;
+    font-size: 2em;
+    padding-bottom: 10px;
+  }
+
+  h3 {
+    font-size: 1.5em;
+    margin-bottom: 0;
+  }
+
+  h3,
+  h3 a {
+    color: #2F251D;
+  }
+
+  p {
+    color: #4A3F35;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 24px;
+  }
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Candara, sans-serif;
+      background-color: #33302c;
+      color: #f4e0d7;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: auto auto;
+    }
+
+    .service {
+      position: relative;
+      overflow: hidden;
+      height: 300px;
+    }
+
+    .service img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .service-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background-color: #3c342f;
+      color: #f4e0d7;
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .service h2 {
+      margin: 0 0 10px;
+      font-size: 22px;
+      color: #f4bfa3;
+    }
+
+    .service p {
+      margin: 0;
+    }
+
+    .btn {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #f4bfa3;
+      color: #3c342f;
+      border: none;
+      border-radius: 20px;
+      cursor: pointer;
+      font-weight: bold;
+      align-self: start;
+    }
+
+    .highlight {
+      border-bottom: 2px dotted #f4bfa3;
+      display: inline-block;
+      padding-bottom: 2px;
+      margin-bottom: 10px;
+      color: #f4bfa3;
+    }
+
+  /*---------------------------------------
+     загальне              
+  -----------------------------------------*/
+
+  html{
+    -webkit-font-smoothing: antialiased;
+  }
+
+  a {
+    color: #252525;
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+    text-decoration: none !important;
+  }
+
+  a,
+  input, button,
+  .form-control {
+    -webkit-transition: 0.5s;
+    transition: 0.5s;
+  }
+
+  a:hover, a:active, a:focus {
+    color: #F5C1A5;
+    outline: none;
+  }
+
+
+  .section-title {
+    margin-top: 25px;
+  margin-bottom: 20px;
+  }
+
+  .section-title h2 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .section-title small {
+    display: block;
+  }
+
+  .overlay {
+    background: rgba(20,20,20,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .entry-form {
+    background: #252020;
+    border-radius: 100%;
+    text-align: center;
+    padding: 6em;
+    width: 450px;
+    height: 450px;
+  }
+
+  .entry-form h2 {
+    color: #ffffff;
+    margin: 0;
+  }
+
+  .entry-form .form-control {
+    background: transparent;
+    border: 0;
+    border-bottom: 1px solid;
+    border-radius: 0;
+    box-shadow: none;
+    height: 45px;
+    margin: 10px 0;
+  }
+
+
+  section {
+    position: relative;
+    padding: 100px 0;
+  }
+
+  
+  #reviews {
+    background: #A58D81;
+  }
+
+  
+  #reviews {
+    text-align: center;
+  }
+ 
+
+
+
+  /*---------------------------------------
+     кнопки               
+  -----------------------------------------*/
+
+  .section-btn {
+    background: transparent;
+    border-radius: 50px;
+    border: 1px solid #ffffff;
+    color: #ffffff;
+    font-size: inherit;
+    font-weight: normal;
+    padding: 15px 30px;
+    transition: 0.5s;
+  }
+
+  .section-btn:hover {
+    background: #ffffff;
+    border-color: transparent;
+  }
+
+
+
+  /*---------------------------------------
+       завантаження              
+  -----------------------------------------*/
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 99999;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    background: none repeat scroll 0 0 #ffffff;
+  }
+
+
+  /*---------------------------------------
+      меню            
+  -----------------------------------------*/
+
+  .custom-navbar {
+  background: #4A3F35;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+.custom-navbar .navbar-brand {
+  color: #F5C1A5;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.custom-navbar .navbar-nav.navbar-nav-first {
+  margin-left: 11em;
+}
+
+.custom-navbar .nav li a {
+  line-height: 30px;
+  color: #575757;
+  padding-right: 22px;
+  padding-left: 22px;
+}
+
+.custom-navbar .navbar-nav > li > a:hover,
+.custom-navbar .navbar-nav > li > a:focus {
+  background-color: transparent;
+}
+
+.custom-navbar .nav li a:hover,
+.custom-navbar .nav li.active > a {
+  background-color: #F5C1A5;
+  color: #ffffff;
+}
+
+.custom-navbar .navbar-toggle {
+  border: none;
+  padding-top: 10px;
+  background-color: transparent;
+}
+
+.custom-navbar .navbar-toggle .icon-bar {
+  background: #252525;
+  border-color: transparent;
+}
+
+
+  /*---------------------------------------
+      головна           
+  -----------------------------------------*/
+
+  #home {
+    padding: 0;
+  }
+
+  #home h1 {
+    color: #ffffff;
+  }
+
+
+.static-banner {
+  background-image: url('../images/1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+}
+
+
+.caption {
+  background-color: rgba(20, 20, 20, 0.2);
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+  /*---------------------------------------
+      послуги            
+  -----------------------------------------*/
+#services {
+  background-color: #ffffff;
+  margin: 0;
+  padding: 0;
+}
+
+.service-row {
+  display: flex;
+  flex-direction: row;
+  height: 65vh;
+}
+
+.service-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.service-image, .service-text {
+  width: 50%;
+  height: 100%;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  margin: 0;
+  padding: 0;
+}
+
+.service-text {
+  background-color: #3F362F;
+  color: #F5F0EB;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 40px;
+}
+
+.service-text h2 {
+  color: #3F362F;
+  font-size: 24px;
+}
+
+.service-text h3 {
+  color: #F5C1A5;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.service-text p {
+  font-size: 16px;
+  color: #F5F0EB;
+}
+
+
+ /*---------------------------------------
+      заміри          
+  -----------------------------------------*/
+
+
+.banner {
+  position: relative;
+  background-image: url('../images/6.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 85vh;
+}
+
+.banner h2 {
+  position: absolute;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: #ffffff;
+  font-size: 2em;
+  padding-bottom: 10px;
+}
+
+
+.measurements-row {
+  display: flex;
+  gap: 30px;
+  margin-top: 110px;
+  justify-content: center;
+}
+
+.second-row {
+  margin-top: 30px; 
+}
+
+.third-row {
+  margin-top: 30px; 
+}
+
+.measurement-block {
+  background-color: #4A3F35;
+  color: #F5F0EB;
+  border-radius: 15px;
+  width: 300px;
+  height: 150px;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 15px;
+  box-sizing: border-box;
+}
+
+.measurement-block h3 {
+  color: #F5C1A5;
+  margin: 10px 0 10px;
+  font-size: 18px;
+}
+
+.measurement-block p {
+  margin: 0;
+  color: #F5F0EB;
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+.full-width {
+  width: 1550px;
+  height: 50px;
+  margin-top: 20px;
+}
+
+
+  /*---------------------------------------
+      про нас            
+  -----------------------------------------*/
+
+  .about {
+    background: #ffffff;
+    overflow: hidden;
+    text-align: left;
+  }
+
+#about {
+  padding-top: 0;  /* або 0, якщо хочеш зовсім впритул */
+  margin-top: 0;
+}
+
+
+  .about-image img {
+    width: 190%;
+  }
+
+
+  /*---------------------------------------
+      відгуки           
+  -----------------------------------------*/
+
+  #reviews .item {
+    background: #ffffff;
+    margin: 20px 0;
+    padding: 4em 3em;
+    text-align: left;
+  }
+
+  #courses .col-md-4,
+  #reviews .col-md-4 {
+    display: block;
+    width: 100%;
+  }
+
+  #reviews .item > p {
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  .tst-author {
+    display: inline-block;
+    vertical-align: middle;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+
+  .tst-author h4 {
+    margin: 0;
+  }
+
+  .tst-author span {
+    color: #808080;
+    font-size: 14px;
+  }
+
+
+
+ /*---------------------------------------
+    контакти           
+-----------------------------------------*/
+#contact {
+  background: #2F251D;
+}
+
+#contact h2 {
+  color: #F5C1A5;
+}
+
+#contact .section-title {
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#contact p {
+  color: #F5F0EB;
+}
+
+#contact-form {
+  padding: 1em 0;
+}
+
+#contact-form .col-md-12,
+#contact-form .col-md-4 {
+  padding-left: 0;
+}
+
+#contact-form .form-control {
+  border: 0;
+  border-radius: 5px;
+  box-shadow: none;
+  margin: 10px 0;
+}
+
+#contact-form input {
+  height: 50px;
+}
+
+#contact-form input[type='submit'] {
+  border-radius: 50px;
+  border: 1px solid transparent;
+}
+
+#contact-form input[type='submit']:hover {
+  background: transparent;
+  border-color: #ffffff;
+  color: #ffffff;
+}
+
+.footer_menu h2 {
+  margin-top: 1em;
+}
+
+
+.bottom-footer {
+  background: #F5F0EB;
+  padding: 20px 0;
+}
+
+.bottom-footer p {
+  color: #999999;
+  margin: 0;
+  font-size: 14px;
+}
+
+
+  /*---------------------------------------
+     іконки             
+  -----------------------------------------*/
+.social-icon {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social-icon li {
+  display: inline-block;
+}
+
+.social-img {
+  width: 40px;
+  height: 40px;
+  display: block;
+}
+
+
+
+
+.gallery-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.gallery-grid img {
+  width: calc(33.333% - 13.34px); /* 3 в ряд із проміжками */
+  border-radius: 12px;
+  object-fit: cover;
+  height: 420px;
+  transition: transform 0.3s ease;
+}
